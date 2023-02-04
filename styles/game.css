@@ -1,0 +1,261 @@
+/***************************************************************************/
+
+/* GAME HEADER */
+
+/***************************************************************************/
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.current-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #1f3641;
+  border-radius: 5px;
+  box-shadow: inset 0 -0.2rem 0 #0f191e;
+  gap: 1rem;
+}
+
+.active-player {
+  width: 3rem;
+}
+
+.current-player span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.restart {
+  background-color: #a8bfc9;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.restart img {
+  width: 2rem;
+}
+
+.restart:hover {
+  cursor: pointer;
+}
+
+/***************************************************************************/
+
+/* BOARD */
+
+/***************************************************************************/
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.cell {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  padding: 6rem;
+  background-color: #1f3641;
+  box-shadow: inset 0 -0.8rem 0 #0f191e;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.cell:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/***************************************************************************/
+
+/* GAME STATS */
+
+/***************************************************************************/
+
+.game-stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  color: #1a2a33;
+}
+
+.game-stats div {
+  padding: 1rem 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.game-stats div p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.game-stats div span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.x-wins {
+  background-color: #31c3bd;
+}
+
+.draw {
+  background-color: #a8bfc9;
+}
+
+.o-wins {
+  background-color: #f2b137;
+}
+
+.noEvents {
+  pointer-events: none;
+}
+
+/***************************************************************************/
+
+/* Modal Window */
+
+/***************************************************************************/
+
+.modal-window {
+  display: none;
+  /* display: flex */
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1f3641;
+  height: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.result {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.result p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.result p img {
+  height: 5rem;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.quit,
+.next-round {
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 9px;
+  border: none;
+  box-shadow: inset 0 -0.5rem 0 #000;
+  color: #1f3641;
+  letter-spacing: 1px;
+}
+
+.quit {
+  background-color: #a8bfc9;
+}
+
+.next-round {
+  background-color: rgb(248, 191, 86);
+}
+
+.ai-thinking {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  width: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ai-thinking div {
+  background-color: #a8bfc9;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.ai-thinking div:first-child {
+  animation: pulsate 1s infinite;
+}
+
+.ai-thinking div:nth-child(2) {
+  animation: pulsate 1s infinite;
+  animation-delay: 0.3s;
+}
+
+.ai-thinking div:nth-child(3) {
+  animation: pulsate 1s infinite;
+  animation-delay: 0.6s;
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

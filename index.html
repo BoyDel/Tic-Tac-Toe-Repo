@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/game.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/queries.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.svg" />
+
+    <title>TicTacToe Game</title>
+  </head>
+  <body>
+    <div class="home-page">
+      <div class="logo-div">
+        <img src="images/logo.svg" alt="TicTacToe logo" />
+      </div>
+      <div class="pick-player">
+        <p class="heading">Pick player 1's mark</p>
+        <div class="choices">
+          <div class="x-choice">
+            <img src="images/icon-x-default.svg" alt="x icon" />
+          </div>
+          <div class="o-choice">
+            <img src="images/icon-o-default.svg" alt="o icon" />
+          </div>
+        </div>
+        <div class="reminder">
+          Reminder: X is first to play
+          <br />
+          <small>Only matters if you play against AI</small>
+        </div>
+      </div>
+      <div class="game-mode">
+        <button class="two-players-button">New Game (VS Human 💂🏼‍♂️)</button>
+        <button class="easy">New Game (VS AI - easy level 🤖)</button>
+        <button class="hard">New Game (VS AI - hard level 🤖)</button>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="ai-thinking">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="game-header">
+        <img src="images/logo.svg" alt="TicTacToe logo" class="logo" />
+        <div class="current-player">
+          <img
+            src="images/icon-x-default.svg"
+            alt="Icon of x player"
+            class="active-player"
+          />
+          <span> to play </span>
+        </div>
+        <button class="restart">
+          <img src="images/icon-restart.svg" alt="Restart icon" />
+        </button>
+      </div>
+      <div class="board">
+        <div class="cell" data-column="0" data-row="0"></div>
+        <div class="cell" data-column="1" data-row="0"></div>
+        <div class="cell" data-column="2" data-row="0"></div>
+        <div class="cell" data-column="0" data-row="1"></div>
+        <div class="cell" data-column="1" data-row="1"></div>
+        <div class="cell" data-column="2" data-row="1"></div>
+        <div class="cell" data-column="0" data-row="2"></div>
+        <div class="cell" data-column="1" data-row="2"></div>
+        <div class="cell" data-column="2" data-row="2"></div>
+      </div>
+      <div class="game-stats">
+        <div class="x-wins">
+          <p class="stats-header">Player 1</p>
+          <span>0</span>
+        </div>
+        <div class="draw">
+          <p class="stats-header">Draw</p>
+          <span>0</span>
+        </div>
+        <div class="o-wins">
+          <p class="stats-header">Player 2</p>
+          <span>0</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window">
+      <div class="result"></div>
+      <div class="options">
+        <button class="quit">Quit</button>
+        <button class="next-round">Next Round</button>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
